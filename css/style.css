@@ -1,6 +1,21 @@
+/* Standard */
 html {
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
 }
 
-/* Box Model */
+#page-home {
+    height:100vh;
+    background: url();
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
