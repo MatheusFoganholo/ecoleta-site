@@ -3,5 +3,5 @@ This is the official repository of "Ecoleta", a fictional project, created for p
 Thanks to: @maykbrito (Instructor)
 
 ~~~~~
-Esse é o repositório oficial do site "Ecoleta", um projeto fictício, criado para portfólio, realizada na "Semana Next Level" da "Rocketseat".
+Esse é o repositório oficial do site "Ecoleta", um projeto fictício, criado para portfólio, realizado na "Semana Next Level" da "Rocketseat".
 Agradecimento à: @maykbrito (Instrutor)
