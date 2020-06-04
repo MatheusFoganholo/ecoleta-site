@@ -1,5 +1,5 @@
 #modal {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -59,6 +59,7 @@
     padding: 16px 24px;
     font-size: 16px;
     color: #6c6c80;
+    outline: none;
 }
 
 #modal form button {
