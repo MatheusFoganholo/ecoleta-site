@@ -1,24 +1,24 @@
-#page-create-point {
+#page-search-results {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-#page-create-point header {
+#page-search-results header {
     margin-top: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#page-create-point header a {
+#page-search-results header a {
     color: var(--title-color);
     font-weight: bold;
     display: flex;
     align-items: center;
 }
 
-#page-create-point header a span {
+#page-search-results header a span {
     margin-right: 16px;
     background-image: url(../assets/arrow-left.svg);
     display: flex;
@@ -26,126 +26,59 @@
     height: 24px;
 }
 
-/* Form Area */
-form {
-    background-color: white;
-    margin: 80px auto;
-    padding: 64px;
-    border-radius: 8px;
-    max-width: 730px;
+main {
+    margin: 48px;
 }
 
-form h1 {
-    font-size: 36px;
+main h4 {
+    font-weight: normal;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 32px;
+    margin-top: 80px;
 }
 
-form fieldset {
-    margin-top: 64px;
-    border: 0;
-}
-
-form legend {
-    margin-bottom: 16px;
-}
-
-form legend h2 {
-    font-size: 24px;
-}
-
-form .field {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 24px;
-}
-
-form .field-group {
-    display: flex;
-}
-
-form input,
-form select {
-    background-color: #f0f0f5;
-    border: 0;
-    padding: 16px 24px;
-    font-size: 16px;
-    border-radius: 8px;
-    outline: none;
-}
-
-form select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-form label {
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-form .field-group .field + .field {
-    margin-left: 24px;
-}
-
-form button {
-    width: 260px;
-    height: 56px;
-    background-color: var(--primary-color);
-    border-radius: 8px;
-    border: 0;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 40px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-form button:hover {
-    background-color: #2FB86E;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in;
-    transition-property: all;
-}
-
-/* Image Items (Select) */
-.items-grid {
+main .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
+    gap: 36px;
 }
 
-.items-grid li {
-    background-color: #F5F5F5;
-    list-style: none;
-    border: 2px solid #F5F5F5;
-    border-radius: 8px;
-    height: 180px;
-    padding: 32px 24px 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    cursor: pointer;
+main .card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
 }
 
-.items-grid li span {
-    margin-top: 12px;
-    display: flex;
-    flex: 1;
-    align-items: center;
-    color: var(--title-color);
+main .card h1 {
+    margin-top: 32px;
+    font-size: 36px;
+    line-height: 41px;
+    color: #322153;
 }
 
-.items-grid li.selected {
-    background-color: #E1FAEC;
-    border: 2px solid #34CB79;
+main .card h3 {
+    margin: 12px 0 6px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--primary-color);
 }
 
-.items-grid li img,
-.items-grid li span {
-    pointer-events: none;
+main .card p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #6C6C80;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    background: white;
+    top: 330px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
 }

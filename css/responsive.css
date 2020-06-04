@@ -19,6 +19,14 @@
     #page-home main {
         align-items: center;
     }
+
+    #page-search-results main .cards {
+        grid-template-columns: 1fr;
+    }
+
+    body::after {
+        display: none;
+    }
 }
 
 /* Big Monitors */
