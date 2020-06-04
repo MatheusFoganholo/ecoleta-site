@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Resultado da pesquisa</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/search-results.css">
-        <link rel="stylesheet" href="css/responsive.css">
-    </head>
-    <body>
-        <!-- Page Creating Point -->
-        <div id="page-search-results">
+{% extends "partials/layout.html" %}
+                
+        {% set pageId = "page-search-results" %}
+        {% block pagetitle %}
+            <title>Resultado da pesquisa</title>
+        {% endblock pagetitle %}
 
-                <!-- Header Area -->
-                <header>
-                    <img src="assets/logo.svg" alt="Logomarca Ecoleta">
-                    <a href="index.html">
-                        <span></span>
-                        Voltar para home
-                    </a>
-                </header>
+        {% block css %}
+        <link rel="stylesheet" href="css/search-results.css">
+        {% endblock css %}
+
+        {% block content %}
+                {% include "partials/page-header.html" %}
 
                 <!-- Main Area -->
                 <main>
@@ -52,6 +42,4 @@
                         </div><!--card-->
                     </div><!--cards-->
                 </main>
-        </div><!--page-search-results-->
-    </body>
-</html>
+        {% endblock content %}

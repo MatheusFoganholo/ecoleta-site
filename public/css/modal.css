@@ -6,6 +6,8 @@
     left: 0;
     top: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 400ms;
 }
 
@@ -16,7 +18,6 @@
 #modal .content {
     color: white;
     width: 420px;
-    justify-content: center;
 }
 
 #modal .header {

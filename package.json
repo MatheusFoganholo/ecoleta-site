@@ -1,0 +1,27 @@
+{
+  "name": "ecoleta",
+  "version": "1.0.0",
+  "description": "This is the official repository of \"Ecoleta\", a fictional project, created for portfolio, held at \"Next Level Week\" from \"Rocketseat\".\r Thanks to: @maykbrito (Instructor)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusFoganholo/ecoleta-site.git"
+  },
+  "keywords": [],
+  "author": "Matheus Foganholo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusFoganholo/ecoleta-site/issues"
+  },
+  "homepage": "https://github.com/MatheusFoganholo/ecoleta-site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "partials/layout.html" %}
+        
+        {% set pageId = "page-create-point" %}
+        {% block pagetitle %}
         <title>Criar um ponto de coleta</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/create-point.css">
-        <link rel="stylesheet" href="css/responsive.css">
-    </head>
-    <body>
-        <!-- Page Creating Point -->
-        <div id="page-create-point">
+        {% endblock pagetitle %}
 
-                <!-- Header Area -->
-                <header>
-                    <img src="assets/logo.svg" alt="Logomarca Ecoleta">
-                    <a href="index.html">
-                        <span></span>
-                        Voltar para home
-                    </a>
-                </header>
+        {% block css %}
+        <link rel="stylesheet" href="css/create-point.css">
+        {% endblock css %}
+
+        {% block content %}
+                {% include "partials/page-header.html" %}
 
                 <!-- Form Area -->
                 <form action="">
@@ -33,22 +23,31 @@
                             <h2>Dados da entidade</h2>
                         </legend>
 
-                        <!-- Field 1 -->
-                        <div class="field">
-                            <label for="name">Nome da entidade</label>
-                            <input type="text" name="name" required>
-                        </div><!--field-->
+                        <!-- Field  1 -->
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="name">Nome da entidade</label>
+                                <input type="text" name="name" required>
+                            </div><!--field-->
+                        
+                        <!-- Image Field (2) -->
+                            <div class="field">
+                                <label for="name">Imagem da entidade</label>
+                                <input type="url" name="image" required placeholder="Insira uma URL">
+                            </div><!--field-->
+
+                        </div><!--field-group--
 
                         <!-- Group Of Fields (1) -->
                         <div class="field-group">
 
-                            <!-- Field 2 -->
+                            <!-- Field 3 -->
                             <div class="field">
                                 <label for="address">Endereço</label>
                                 <input type="text" name="address" required>
                             </div><!--field-->
 
-                            <!-- Field 3 -->
+                            <!-- Field 4 -->
                             <div class="field">
                                 <label for="address2">Número/Complemento</label>
                                 <input type="text" name="adress2" required>
@@ -59,23 +58,21 @@
                         <!-- Group Of Fields (2) -->
                         <div class="field-group">
 
-                            <!-- Field 4 -->
+                            <!-- Field 5 -->
                             <div class="field">
                                 <label for="state">Estado</label>
                                 <select name="uf" required>
                                     <option value="">Selecione o Estado</option>
                                 </select>
-
                                 <input type="hidden" name="state">
                             </div><!--field-->
 
-                            <!-- Field 5 -->
+                            <!-- Field 6 -->
                             <div class="field">
                                 <label for="city">Cidade</label>
                                 <select name="city" disabled required>
                                     <option value="">Selecione a Cidade</option>
                                 </select>
-                                
                             </div><!--field-->
 
                         </div><!--field-group-->
@@ -85,6 +82,7 @@
                     <fieldset>
                         <legend>
                             <h2>Itens de coleta</h2>
+                            <span>Selecione um ou mais itens abaixo</span>
                         </legend>
 
                         <!-- Image Select -->
@@ -133,9 +131,10 @@
 
                     <button type="submit">Cadastrar ponto de coleta</button>
                 </form>
-        </div><!--page-create-point-->
+        {% endblock content %}
 
+        
+        {% block scripts %}
         <!-- Javascript -->
         <script src="/js/create-point.js"></script>
-    </body>
-</html>
+        {% endblock scripts %}
