@@ -32,7 +32,7 @@
         margin-left: 0;
     }
 
-    form {
+    #page-create-point form {
         margin: 20px 0 20px 0;
         padding: 36px;
     }
@@ -89,11 +89,27 @@
         margin-top: 20px;
     }
 
-    #page-create-point header {
+    #page-create-point header, #page-search-results header {
         flex-direction: column;
     }
 
-    #page-create-point header a {
+    #page-create-point header a, #page-search-results header a {
         margin-top: 20px;
+    }
+
+    #modal .content {
+        width: 90%;
+    }
+
+    #modal .header h1 {
+        font-size: 24px;
+    }
+
+    #modal form input {
+        max-width: calc(100% - 72px);
+    }
+
+    .items-grid {
+        grid-template-columns: 1fr;
     }
 }
