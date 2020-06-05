@@ -24,10 +24,6 @@
         grid-template-columns: 1fr;
     }
 
-    body::after {
-        display: none;
-    }
-
     #page-create-point .field-group {
         flex-direction: column;
     }

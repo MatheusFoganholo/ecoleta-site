@@ -7,13 +7,14 @@
 
         {% block css %}
         <link rel="stylesheet" href="css/create-point.css">
+        <link rel="stylesheet" href="css/modal.css">
         {% endblock css %}
 
         {% block content %}
                 {% include "partials/page-header.html" %}
 
                 <!-- Form Area -->
-                <form action="">
+                <form action="/savepoint" method="POST">
                     <!-- Title -->
                     <h1>Cadastro do ponto de coleta</h1>
 
@@ -27,7 +28,7 @@
                         <div class="field-group">
                             <div class="field">
                                 <label for="name">Nome da entidade</label>
-                                <input type="text" name="name" required>
+                                <input type="text" name="name" required placeholder="Digite o nome da entidade">
                             </div><!--field-->
                         
                         <!-- Image Field (2) -->
@@ -44,13 +45,13 @@
                             <!-- Field 3 -->
                             <div class="field">
                                 <label for="address">Endereço</label>
-                                <input type="text" name="address" required>
+                                <input type="text" name="address" required placeholder="Nome da rua, nome do bairro">
                             </div><!--field-->
 
                             <!-- Field 4 -->
                             <div class="field">
                                 <label for="address2">Número/Complemento</label>
-                                <input type="text" name="adress2" required>
+                                <input type="text" name="adress2" required placeholder="N° 123">
                             </div><!--field-->
 
                         </div><!--field-group-->
@@ -89,37 +90,37 @@
                         <div class="items-grid">
 
                             <!-- Item 1 - Lâmpadas -->
-                            <li data-id="1">
+                            <li data-id="Lâmpadas">
                                 <img src="/assets/lampadas.svg" alt="Lâmpadas">
                                 <span>Lâmpadas</span>
                             </li>
 
                             <!-- Item 2 - Pilhas e Baterias -->
-                            <li data-id="2">
+                            <li data-id="Pilhas e Baterias">
                                 <img src="/assets/baterias.svg" alt="Pilhas e Baterias">
                                 <span>Pilhas e Baterias</span>
                             </li>
 
                             <!-- Item 3 - Papéis e Papelão -->
-                            <li data-id="3">
+                            <li data-id="Papéis e Papelão">
                                 <img src="/assets/papeis-papelao.svg" alt="Papéis e Papelão">
                                 <span>Papéis e Papelão</span>
                             </li>
 
                             <!-- Item 4 - Resíduos Eletrônicos -->
-                            <li data-id="4">
+                            <li data-id="Resíduos Eletrônicos">
                                 <img src="/assets/eletronicos.svg" alt="Resíduos Eletrônicos">
                                 <span>Resíduos Eletrônicos</span>
                             </li>
 
                             <!-- Item 5 - Resíduos Orgânicos -->
-                            <li data-id="5">
+                            <li data-id="Resíduos Orgânicos">
                                 <img src="/assets/organicos.svg" alt="Resíduos Orgânicos">
                                 <span>Resíduos Orgânicos</span>
                             </li>
 
                             <!-- Item 6 - Óleo de Cozinha -->
-                            <li data-id="6">
+                            <li data-id="Óleo de Cozinha">
                                 <img src="/assets/oleo.svg" alt="Óleo de Cozinha">
                                 <span>Óleo de Cozinha</span>
                             </li>
@@ -132,6 +133,12 @@
                     <button type="submit">Cadastrar ponto de coleta</button>
                 </form>
         {% endblock content %}
+
+        {% block modal %}
+            {% if saved %}
+                {% include "partials/point-created.html" %}
+            {% endif %}
+        {% endblock modal %}
 
         
         {% block scripts %}

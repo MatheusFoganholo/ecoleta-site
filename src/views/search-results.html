@@ -14,32 +14,29 @@
 
                 <!-- Main Area -->
                 <main>
-                    <h4>
-                        <strong>2 pontos</strong> encontrados
-                    </h4>
+                    {% if total > 0 %}
+                        <h4>
+                            <strong>{{total}} pontos</strong> encontrados
+                        </h4>
 
-                    <div class="cards">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1401&q=80" alt="Colectoria">
-                            <h1>Colectoria</h1>
-                            <h3>Resíduos Eletrônicos, Lâmpadas</h3>
-                            <p>
-                                Rio do Sul, Santa Catarina<br/>
-                                Rua Guiherme Gemballa, Jardim América<br/>
-                                N° 260
-                            </p>
-                        </div><!--card-->
+                        <div class="cards">
 
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Papersider">
-                            <h1>Papersider</h1>
-                            <h3>Papéis e Papelão</h3>
-                            <p>
-                                Rio do Sul, Santa Catarina<br/>
-                                Rua Guiherme Gemballa, Jardim América<br/>
-                                N° 280
-                            </p>
-                        </div><!--card-->
-                    </div><!--cards-->
+                            {% for place in places %}
+                            <div class="card">
+                                <img src="{{place.image}}" alt="{{place.name}}">
+                                <h1>{{place.name}}</h1>
+                                <h3>{{place.items}}</h3>
+                                <p>
+                                    {{place.city}}, {{place.state}}<br/>
+                                    {{place.address}}<br/>
+                                    {{place.address2}}
+                                </p>
+                            </div><!--card-->
+                            {% endfor %}
+                        </div><!--cards-->
+                    {%else%}
+                        <h4><strong>Nenhum</strong> local encontrado</h4>
+                    {% endif %}
+
                 </main>
         {% endblock content %}
