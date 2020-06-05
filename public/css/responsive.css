@@ -11,7 +11,7 @@
 
     #page-home header a {
         position: absolute;
-        bottom: 48px;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -31,6 +31,19 @@
     #page-create-point .field-group .field + .field {
         margin-left: 0;
     }
+
+    form {
+        margin: 20px 0 20px 0;
+        padding: 36px;
+    }
+
+    form button {
+        display: block;
+    }
+
+    form fieldset {
+        margin-top: 30px;
+    }
 }
 
 /* Big Monitors */
@@ -44,5 +57,43 @@
 @media only screen and (max-height: 760px) {
     #page-home {
         background-position-y: 200px;
+    }
+}
+
+/* Mobile Items */
+@media only screen and (max-width: 800px) {
+    .items-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    form legend span {
+        display: none;
+    }
+
+    #page-home main h1 {
+        font-size: 40px;
+    }
+
+    #page-home main p {
+        font-size: 20px;
+    }
+
+    #page-home header a span {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    form {
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    #page-create-point header {
+        flex-direction: column;
+    }
+
+    #page-create-point header a {
+        margin-top: 20px;
     }
 }
