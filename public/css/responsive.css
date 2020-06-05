@@ -44,6 +44,10 @@
     form fieldset {
         margin-top: 30px;
     }
+
+    #page-search-results main h4 {
+        margin-top: 10px;
+    }
 }
 
 /* Big Monitors */
@@ -112,4 +116,5 @@
     .items-grid {
         grid-template-columns: 1fr;
     }
+
 }
