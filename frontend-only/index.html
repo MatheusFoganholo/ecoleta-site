@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ecoleta</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <!-- Home Page -->
+        <div id="page-home">
+  
+            <!-- Content Div -->
+            <div class="content">
+
+                <!-- Header Area -->
+                <header>
+                    <img src="assets/logo.svg" alt="Logomarca Ecoleta">
+                    <a href="creating-point.html">
+                        <span></span>
+                        Cadastre um ponto de coleta
+                    </a>
+                </header>
+
+                <!-- Main Area -->
+                <main>
+                    <h1>Seu marketplace de coleta de resíduos</h1>
+                    <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+                    <a href="#">
+                        <span></span>
+                        <strong>Pesquisar pontos de coleta</strong>
+                    </a>
+                </main>
+            </div><!--content-->
+        </div><!--page-home-->
+
+        <!-- Modal -->
+        <div id="modal" class="hide">
+            <div class="content">
+
+                <!-- Modal Header -->
+                <div class="header">
+                    <h1>Pontos de Coleta</h1>
+                    <a href="">Fechar</a>
+                </div><!--header-->
+
+                <!-- Field Area -->
+                <form action="search-results.html">
+                    <label for="search">Cidade</label>
+                    <div class="search field">
+                        <input type="text" name="search" placeholder="Pesquise por cidade, ex: Jaú">
+                        <button>
+                            <img src="assets/search.svg" alt="Buscar">
+                        </button>
+                    </div><!--search field-->
+                </form>
+            </div><!--content-->
+        </div><!--modal-->
+
+        <!-- Javascript -->
+        <script src="js/index.js"></script>
+    </body>
+</html>

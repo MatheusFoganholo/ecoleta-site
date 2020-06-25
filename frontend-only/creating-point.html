@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criar um ponto de coleta - Ecoleta</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/create-point.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <!-- Home Page -->
+        <div id="page-create-point">
+            <!-- Header Area -->
+            <header>
+                <img src="assets/logo.svg" alt="Logomarca Ecoleta">
+                <a href="index.html">
+                    <span></span>
+                    Voltar para home
+                </a>
+            </header>
+
+            <!-- Form Area -->
+            <form>
+                <!-- Title -->
+                <h1>Cadastro do ponto de coleta</h1>
+
+                <!-- Entity Data -->
+                <fieldset>
+                    <legend>
+                        <h2>Dados da entidade</h2>
+                    </legend>
+
+                    <!-- Field  1 -->
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="name">Nome da entidade</label>
+                            <input type="text" name="name" placeholder="Digite o nome da entidade">
+                        </div><!--field-->
+                    
+                    <!-- Image Field (2) -->
+                        <div class="field">
+                            <label for="name">Imagem da entidade</label>
+                            <input type="url" name="image" placeholder="Insira uma URL">
+                        </div><!--field-->
+
+                    </div><!--field-group--
+
+                    <!-- Group Of Fields (1) -->
+                    <div class="field-group">
+
+                        <!-- Field 3 -->
+                        <div class="field">
+                            <label for="address">Endereço</label>
+                            <input type="text" name="address" placeholder="Nome da rua, nome do bairro">
+                        </div><!--field-->
+
+                        <!-- Field 4 -->
+                        <div class="field">
+                            <label for="address2">Número/Complemento</label>
+                            <input type="text" name="adress2" placeholder="N° 123">
+                        </div><!--field-->
+
+                    </div><!--field-group-->
+
+                    <!-- Group Of Fields (2) -->
+                    <div class="field-group">
+
+                        <!-- Field 5 -->
+                        <div class="field">
+                            <label for="state">Estado</label>
+                            <select name="uf">
+                                <option value="">Selecione o Estado</option>
+                            </select>
+                            <input type="hidden" name="state">
+                        </div><!--field-->
+
+                        <!-- Field 6 -->
+                        <div class="field">
+                            <label for="city">Cidade</label>
+                            <select name="city" disabled>
+                                <option value="">Selecione a Cidade</option>
+                            </select>
+                        </div><!--field-->
+
+                    </div><!--field-group-->
+                </fieldset>
+
+                <!-- Coleta Items -->
+                <fieldset>
+                    <legend>
+                        <h2>Itens de coleta</h2>
+                        <span>Selecione um ou mais itens abaixo</span>
+                    </legend>
+
+                    <!-- Image Select -->
+                    <div class="items-grid">
+
+                        <!-- Item 1 - Lâmpadas -->
+                        <li data-id="Lâmpadas">
+                            <img src="assets/lampadas.svg" alt="Lâmpadas">
+                            <span>Lâmpadas</span>
+                        </li>
+
+                        <!-- Item 2 - Pilhas e Baterias -->
+                        <li data-id="Pilhas e Baterias">
+                            <img src="assets/baterias.svg" alt="Pilhas e Baterias">
+                            <span>Pilhas e Baterias</span>
+                        </li>
+
+                        <!-- Item 3 - Papéis e Papelão -->
+                        <li data-id="Papéis e Papelão">
+                            <img src="assets/papeis-papelao.svg" alt="Papéis e Papelão">
+                            <span>Papéis e Papelão</span>
+                        </li>
+
+                        <!-- Item 4 - Resíduos Eletrônicos -->
+                        <li data-id="Resíduos Eletrônicos">
+                            <img src="assets/eletronicos.svg" alt="Resíduos Eletrônicos">
+                            <span>Resíduos Eletrônicos</span>
+                        </li>
+
+                        <!-- Item 5 - Resíduos Orgânicos -->
+                        <li data-id="Resíduos Orgânicos">
+                            <img src="assets/organicos.svg" alt="Resíduos Orgânicos">
+                            <span>Resíduos Orgânicos</span>
+                        </li>
+
+                        <!-- Item 6 - Óleo de Cozinha -->
+                        <li data-id="Óleo de Cozinha">
+                            <img src="assets/oleo.svg" alt="Óleo de Cozinha">
+                            <span>Óleo de Cozinha</span>
+                        </li>
+                    </div>
+
+                    <input type="hidden" name="items">
+                </fieldset>
+
+                <button onclick='redirect()'>Cadastrar ponto de coleta</button>
+            </form>
+        </div>
+
+
+        <!-- Modal -->
+        <div id="modal" class="hide point">
+            <div class="content">
+                <img src="assets/check.svg" alt="Cadastro concluído!">
+                <h1>
+                    Solicitação realizada!
+                    <br/>
+                    Aguardando aprovação.
+                </h1>
+            </div><!--content-->
+        </div><!--modal-->
+
+        <!-- Javascript -->
+        <script src="/js/create-point.js"></script>
+    </body>
+</html>
