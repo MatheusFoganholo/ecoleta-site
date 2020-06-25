@@ -4,20 +4,25 @@
         background-position-x: 70vw;
     }
 
-    #page-home .content {
-        align-items: center;
+    #page-home header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
     }
 
     #page-home header a {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+    #page-home header a span {
+        display: block;
     }
 
     #page-home main {
         align-items: center;
+        text-align: center;
     }
 
     #page-search-results main .cards {
@@ -81,10 +86,6 @@
     #page-home main p {
         font-size: 20px;
     }
-
-    #page-home header a span {
-        display: none;
-    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -116,5 +117,4 @@
     .items-grid {
         grid-template-columns: 1fr;
     }
-
 }
